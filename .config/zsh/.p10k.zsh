@@ -1,0 +1,1 @@
+/Users/andrew/.p10k.zsh
