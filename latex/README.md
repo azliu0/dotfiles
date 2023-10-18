@@ -22,7 +22,7 @@ will open the pdf compiled output that updates on every save. I've found this to
 
 ### note on asymptote diagrams
 
-Normally, compiling an asymptote diagram looks something like this: 
+Normally, compiling an asymptote diagram locally is a multi-step process:
 1. compile as usual, e.g., 
 ```sh
 latexmk -pdf
@@ -37,7 +37,7 @@ which produces ```<filename>-n.pdf```.
 
 3. Now that all of the asymptote is compiled, recompile the entire file with latexmk and the diagrams will show up.  
 
-This is cumbersome and not very compatible with vimtex. Luckily, [there is a fix](https://tex.stackexchange.com/questions/680997/asymptote-figures-dont-appear-with-vimtex). This is bundled into the ```notes_template``` and ```pset_template``` scripts, so there is no extra work needed to compile asymptote with this workflow! 
+This is cumbersome and not very compatible with vimtex. Luckily, there is a way to have latexmk automatically do step 2 before step 1, which also eliminates the need for step 3; see [here](https://tex.stackexchange.com/questions/680997/asymptote-figures-dont-appear-with-vimtex). This is bundled into the ```notes_template``` and ```pset_template``` scripts, so there is no extra work needed to compile asymptote with this workflow! 
 
 ### screenshot 
 
