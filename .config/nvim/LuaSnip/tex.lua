@@ -26,4 +26,10 @@ return {
 		{ trig = "frac" },
 		fmta([[\frac{<>}{}]], {i(0)})
 	),
+
+	-- automatic centering mode expansion
+	snip(
+		{ trig = "\\[" },
+		fmta([[\[<>\] ]], {i(0)})
+	),
 }
