@@ -2,7 +2,7 @@
 
 My collection of dotfiles, for personal use. I use MacOS. 
 
-* [NeoVim](https://neovim.io/) text editor
+* [Neovim](https://neovim.io/) text editor
   * [vim-plug](https://github.com/junegunn/vim-plug) for plugins
 * [VimTeX](https://github.com/lervag/vimtex) to automatically compile my notes as I write them. See [here](latex) for more details on my LaTeX setup.
   * [Zathura](https://pwmt.org/projects/zathura/) pdf viewer
