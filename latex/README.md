@@ -1,6 +1,6 @@
 # LaTeX
 
-To take notes and do problem sets, I use my own style file. More details about what it looks like, functionality, and a minimal working example can be found [here](https://github.com/azliu0/_andrew.sty).
+To take notes and do problem sets, I use my own style file. More details about what it looks like, functionality, and a minimal working example can be found [here](https://github.com/azliu0/_andrew.sty). I use [LuaSnip](https://github.com/L3MON4D3/LuaSnip) for snippets. 
 
 ### setup and workflow
 
