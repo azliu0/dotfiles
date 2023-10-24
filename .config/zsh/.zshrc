@@ -10,6 +10,7 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export ZSHRC="$HOME/.zshrc"
 export DOTFILES="$HOME/Dotfiles"
 export NVIM="$HOME/.config/nvim"
 export NVIMRC="$HOME/.config/nvim/init.vim"
@@ -122,6 +123,7 @@ alias l="ls -la"
 alias catgirl="cat $DOTFILES/secret.txt"
 alias notes_template="zsh $DOTFILES/latex/scripts/notes.sh"
 alias pset_template="zsh $DOTFILES/latex/scripts/pset.sh"
+alias treegen="tree -H . -I 'index.html|make_urls_clickable.sh' -D --timefmt='%b %d %Y %R' --charset utf-8 -T 'Test' > index.html"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
