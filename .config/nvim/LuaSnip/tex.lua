@@ -138,5 +138,17 @@ return {
 		{ i(0) }
 		)
 	),
-		
+
+	-- proof environment
+	snip(
+		{ trig = "proof" },
+		fmta([[
+		\begin{proof}
+		<>
+		\end{proof}
+		]],
+		{ i(0) }
+		)
+	),
+	
 }
