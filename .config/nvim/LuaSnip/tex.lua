@@ -129,16 +129,31 @@ return {
 	snip(
 		{ trig = "ex" },
 		fmta([[
-		\begin{theorem}
+		\begin{example}
 		\exlabel
 
 		<>
-		\end{theorem}
+		\end{example}
 		]],
 		{ i(0) }
 		)
 	),
 
+	-- def environment
+	snip(
+		{ trig = "def" },
+		fmta([[
+		\begin{definition}
+		\deflabel
+
+		<>
+		\end{definition}
+		]],
+		{ i(0) }
+		)
+	),
+
+	
 	-- proof environment
 	snip(
 		{ trig = "proof" },
