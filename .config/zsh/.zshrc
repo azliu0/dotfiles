@@ -123,7 +123,7 @@ alias l="ls -la"
 alias catgirl="cat $DOTFILES/secret.txt"
 alias notes_template="zsh $DOTFILES/latex/scripts/notes.sh"
 alias pset_template="zsh $DOTFILES/latex/scripts/pset.sh"
-alias treegen="tree -H . -I 'index.html|make_urls_clickable.sh' -D --timefmt='%b %d %Y %R' --charset utf-8 -T 'Test' > index.html"
+alias treegen="tree -H . -I 'index.html|*.fdb_latexmk|*.aux|*.fls|*.out|*.pre|*.synctex*|*.toc' -D --timefmt='%b %d %Y %R' --charset utf-8 -T 'Test' > index.html"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
