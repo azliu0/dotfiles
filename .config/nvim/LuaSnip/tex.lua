@@ -166,4 +166,22 @@ return {
 		)
 	),
 	
+	-- section 
+	snip(
+		{ trig = "sec" },
+		fmta([[\section{<>}]], {i(0)})
+	),
+	
+	-- subsection
+	snip(
+		{ trig = "subsec" },
+		fmta([[\subsection{<>}]], {i(0)})
+	),
+
+	-- subsubsection
+	snip(
+		{ trig = "subsubsec" },
+		fmta([[\subsubsection{<>}]], {i(0)})
+	),
+	
 }
