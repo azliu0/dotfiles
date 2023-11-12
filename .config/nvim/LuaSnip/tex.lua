@@ -24,7 +24,7 @@ return {
 	-- automatic frac expansion
 	snip(
 		{ trig = "frac" },
-		fmta([[\frac{<>}{<>}]], { i(1), i(0) })
+		fmta([[\frac{<>}{<>}<>]], { i(1), i(2), i(0) })
 	),
 
 	-- automatic centering mode expansion
@@ -184,15 +184,15 @@ return {
 		fmta([[\subsubsection{<>}]], {i(0)})
 	),
 
-	-- automatically close parens
+	-- wide parens
 	snip(
 		{ trig = "\\left(" },
-		fmta([[\left(<>\right)]], {i(0)})
+		fmta([[\left(<>\right)<>]], {i(1), i(0)})
 	),
 
-	-- automatically close brackets
+	-- wide brackets
 	snip(
 		{ trig = "\\left[" },
-		fmta([[\left[<>\right] ]], {i(0)})
+		fmta([[\left[<>\right]<>]], {i(1), i(0)})
 	),
 }
