@@ -18,7 +18,7 @@ return {
 	-- automatic $$ expansion
 	snip(
 		{ trig = "$" },
-		fmta([[$<>$]], {i(0)})
+		fmta([[$<>$<>]], {i(1), i(0)})
 	),
 
 	-- automatic frac expansion
