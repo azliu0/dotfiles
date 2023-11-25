@@ -210,4 +210,29 @@ return {
 		{ trig = "\\left[" },
 		fmta([[\left[<>\right]<>]], {i(1), i(0)})
 	),
+
+	-- asy environment
+	snip(
+		{ trig = "asy" },
+		fmta([[
+		\begin{asy}
+		<>
+		\end{asy}
+		]],
+		{ i(0) }
+		)
+	),
+
+	-- begin center environment
+	snip(
+		{ trig = "center" },
+		fmta([[
+		\begin{center}
+		<>
+		\end{center}
+		]],
+		{ i(0) }
+		)
+	),
+
 }
