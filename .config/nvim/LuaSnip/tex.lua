@@ -125,6 +125,21 @@ return {
 		)
 	),
 
+	-- claim environment
+	snip(
+		{ trig = "claim" },
+		fmta([[
+		\begin{theorem}
+		\claimlabel
+
+		<>
+		\end{theorem}
+		]],
+		{ i(0) }
+		)
+	),
+	
+
 	-- ex environment
 	snip(
 		{ trig = "ex" },
