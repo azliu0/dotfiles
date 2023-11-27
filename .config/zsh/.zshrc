@@ -15,6 +15,7 @@ export DOTFILES="$HOME/Dotfiles"
 export NVIM="$HOME/.config/nvim"
 export NVIMRC="$HOME/.config/nvim/init.vim"
 export ZSHRC="$HOME/.zshrc"
+export LSNIP="$HOME/Dotfiles/.config/nvim/LuaSnip/tex.lua"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
