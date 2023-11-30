@@ -33,6 +33,12 @@ return {
 		fmta([[\[<>\] ]], {i(0)})
 	),
 	
+	-- italics
+	snip(
+		{ trig = "it" },
+		fmta([[\textit{<>}]], {i(0)})
+	),
+
 	-- align environment
 	snip(
 		{ trig = "align" },
@@ -234,5 +240,16 @@ return {
 		{ i(0) }
 		)
 	),
+	
+	-- mathcal expansion no math mode
+	snip(
+		{ trig = "cal" },
+		fmta([[\mathcal{<>}<>]], {i(1), i(0)})
+	),
 
+	-- mathcal expansion math mode
+	snip(
+		{ trig = "mcal" },
+		fmta([[$\mathcal{<>}$<>]], {i(1), i(0)})
+	),
 }
