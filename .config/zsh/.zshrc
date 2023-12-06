@@ -14,7 +14,7 @@ export ZSHRC="$HOME/.zshrc"
 export DOTFILES="$HOME/Dotfiles"
 export NVIM="$HOME/.config/nvim"
 export NVIMRC="$HOME/.config/nvim/init.vim"
-export ZSHRC="$HOME/.zshrc"
+export STY="$DOTFILES/latex/templates/_andrew.sty"
 export LSNIP="$HOME/Dotfiles/.config/nvim/LuaSnip/tex.lua"
 
 # Set name of the theme to load --- if set to "random", it will
