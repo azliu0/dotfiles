@@ -1,4 +1,5 @@
 set relativenumber
+set number
 set tabstop=2
 set shiftwidth=2
 set showcmd
@@ -30,6 +31,9 @@ Plug 'lervag/vimtex'
 
 " follow latest release and install jsregexp.
 Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'} " Replace <CurrentMajor> by the latest released major (first number of latest release)
+
+" vim game
+Plug 'ThePrimeagen/vim-be-good'
 
 call plug#end()
 
