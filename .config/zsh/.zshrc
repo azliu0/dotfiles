@@ -126,6 +126,7 @@ alias notes_template="zsh $DOTFILES/latex/scripts/notes.sh"
 alias pset_template="zsh $DOTFILES/latex/scripts/pset.sh"
 alias treegen="tree -H . -I 'index.html|*.fdb_latexmk|*.aux|*.fls|*.out|*.pre|*.synctex*|*.toc' -D --timefmt='%b %d %Y %R' --charset utf-8 -T 'Test' > index.html"
 alias f="fortune"
+alias spotify="spicetify update && spicetify config current_theme Ziro && spicetify config color_scheme orange_light && spicetify apply"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -139,18 +140,10 @@ export CPLUS_INCLUDE_PATH=/usr/local/cuda/include
 
 . /Users/andrew/torch/install/bin/torch-activate
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/andrew/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/andrew/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/andrew/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/andrew/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
+
+export PATH=$PATH:/Users/andrew/.spicetify
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
