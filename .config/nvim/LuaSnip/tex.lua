@@ -2,6 +2,8 @@ local ls = require("luasnip")
 local snip = ls.snippet
 local fmta = require("luasnip.extras.fmt").fmta
 
+
+
 return {
 	-- begin/end environment	
 	snip(
@@ -240,7 +242,19 @@ return {
 		{ i(0) }
 		)
 	),
-	
+
+	-- begin cases environment
+	snip(
+		{ trig = "cases" },
+		fmta([[
+		\begin{cases}
+		<>
+		\end{cases}
+		]],
+		{ i(0) }
+		)
+	),
+
 	-- mathcal expansion no math mode
 	snip(
 		{ trig = "cal" },
