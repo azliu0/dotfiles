@@ -41,4 +41,5 @@ This is cumbersome and not very compatible with vimtex. Luckily, there is a way 
 
 ### screenshot 
 
-![image](./images/demo.png)
+<img width="1512" alt="Screenshot 2024-03-18 at 1 23 01 AM" src="https://github.com/azliu0/dotfiles/assets/106511084/98cd3a71-18a1-48fc-b5f4-bf21547641a4">
+
