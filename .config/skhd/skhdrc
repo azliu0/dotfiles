@@ -49,9 +49,9 @@ shift + alt - 9 : yabai -m window --space 9;
 ctrl + alt - s : yabai --start-service
 ctrl + alt - q : yabai --stop-service
 
-# grow window 
-ctrl + alt - j : yabai -m window --resize down:0:-30
-ctrl + alt - k : yabai -m window --resize up:0:30
-ctrl + alt - h : yabai -m window --resize left:-30:0
-ctrl + alt - l : yabai -m window --resize right:30:0
+# resize window 
+ctrl + alt - j : yabai -m window --resize top:0:-30 || yabai -m window --resize bottom:0:-30
+ctrl + alt - k : yabai -m window --resize top:0:30 || yabai -m window --resize bottom:0:30
+ctrl + alt - h : yabai -m window --resize left:-30:0 || yabai -m window --resize right:-30:0
+ctrl + alt - l : yabai -m window --resize left:30:0 || yabai -m window --resize right:30:0
 
