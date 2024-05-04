@@ -104,7 +104,7 @@ alias spotify="spicetify update && spicetify config current_theme Ziro && spicet
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-neofetch
+# neofetch
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
