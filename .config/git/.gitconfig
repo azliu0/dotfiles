@@ -8,7 +8,7 @@
 [alias]
 	lol = log --graph --oneline --decorate --color --all
 [http]
-	sslVerify = false
+	sslVerify = true
 	sslCAInfo = /Users/andrew/.ssh/ca.pem
 [merge]
 	conflictstyle = diff3
