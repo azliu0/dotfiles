@@ -1,0 +1,14 @@
+[user]
+	email = andrewliu278@gmail.com
+	name = Andrew Liu
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[alias]
+	lol = log --graph --oneline --decorate --color --all
+[http]
+	sslVerify = false
+	sslCAInfo = /Users/andrew/.ssh/ca.pem
+[merge]
+	conflictstyle = diff3
