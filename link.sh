@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Usage: link.sh
-# Description: this script links dotfiles into a folder called $HOME/Dotfiles/.config,
-# essentially generating the git repository. not guaranteed to work (:
+# Description: creates hard symlinks for system dotfiles into $HOME/Dotfiles/.config
 #
 # System: 
 # GNU bash, version 3.2.57(1)-release (arm64-apple-darwin23)
