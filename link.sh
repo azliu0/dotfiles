@@ -4,7 +4,7 @@
 # Description: this script links dotfiles into a folder called $HOME/Dotfiles/.config,
 # essentially generating the git repository. not guaranteed to work (:
 #
-# system: 
+# System: 
 # GNU bash, version 3.2.57(1)-release (arm64-apple-darwin23)
 # Copyright (C) 2007 Free Software Foundation, Inc.
 
