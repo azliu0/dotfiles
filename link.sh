@@ -41,13 +41,13 @@ link_file "$HOME/.config/zathura/zathurarc" "$BASE_DIR/zathura/zathurarc"
 link_file "$HOME/.p10k.zsh" "$BASE_DIR/zsh/.p10k.zsh"
 link_file "$HOME/.zshrc" "$BASE_DIR/zsh/.zshrc"
 
-ASY_DIR="$HOME/Library/texmf/tex/latex"
+STY_DIR="$HOME/Library/texmf/tex/latex"
 
 # if _andrew.sty is not installed before linking, throw a warning 
-if [ -e "$ASY_DIR/_andrew.sty" ]; then
-    link_file "$ASY_DIR/_andrew.sty" "$BASE_DIR/asy/_andrew.sty"
+if [ -e "$STY_DIR/_andrew.sty" ]; then
+    link_file "$STY_DIR/_andrew.sty" "$BASE_DIR/latex/_andrew.sty"
 else
-    echo "skipping linking: _andrew.sty is not installed into $ASY_DIR."
+    echo "skipping linking: _andrew.sty is not installed into $STY_DIR."
 fi
 
 echo "linking complete!"
