@@ -1,11 +1,12 @@
 #!/bin/bash
 
 # Usage: link.sh
-# Description: creates hard symlinks for system dotfiles into $HOME/Dotfiles/.config
+# Description: 
+# Creates hard symlinks for system dotfiles into $HOME/Dotfiles/.config
 #
 # System: 
+# macOS 14.1.1 23B81 arm64
 # GNU bash, version 3.2.57(1)-release (arm64-apple-darwin23)
-# Copyright (C) 2007 Free Software Foundation, Inc.
 
 BASE_DIR="$HOME/Dotfiles/.config"
 
@@ -18,7 +19,7 @@ link_file() {
     mkdir -p "$(dirname "$dest")"
 
     if [ -e "$dest" ]; then
-        echo "File already exists: $dest. Removing it."
+        echo "File already exists: $dest. removing it."
         rm -rf "$dest"
     fi
 
@@ -39,5 +40,14 @@ link_file "$HOME/.config/yabai/yabairc" "$BASE_DIR/yabai/yabairc"
 link_file "$HOME/.config/zathura/zathurarc" "$BASE_DIR/zathura/zathurarc"
 link_file "$HOME/.p10k.zsh" "$BASE_DIR/zsh/.p10k.zsh"
 link_file "$HOME/.zshrc" "$BASE_DIR/zsh/.zshrc"
+
+ASY_DIR="$HOME/Library/texmf/tex/latex"
+
+# if _andrew.sty is not installed before linking, throw a warning 
+if [ -e "$ASY_DIR/_andrew.sty" ]; then
+    link_file "$ASY_DIR/_andrew.sty" "$BASE_DIR/asy/_andrew.sty"
+else
+    echo "skipping linking: _andrew.sty is not installed into $ASY_DIR."
+fi
 
 echo "linking complete!"
