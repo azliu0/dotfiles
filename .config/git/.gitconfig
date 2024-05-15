@@ -6,14 +6,6 @@
 [init]
 	defaultBranch = main
 [alias]
-	aa = add -A
-	cm = commit -m
-	cam = commit --amend -m
-	p = push
-	pf = push -f
-	ri = rebase -i --committer-date-is-author-date
-	rc = rebase --continue
-	ra = rebase --abort
 	lol = log --graph --oneline --decorate --color --all
 [core]
 	excludesFile = ~/.gitignore_global
