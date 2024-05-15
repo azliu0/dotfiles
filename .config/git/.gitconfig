@@ -7,6 +7,8 @@
 	defaultBranch = main
 [alias]
 	lol = log --graph --oneline --decorate --color --all
+[core]
+	excludesFile = ~/.gitignore_global
 [http]
 	sslVerify = true
 	sslCAInfo = /Users/andrew/.ssh/ca.pem

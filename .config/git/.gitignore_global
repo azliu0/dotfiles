@@ -1,0 +1,18 @@
+# python
+__pycache__/
+
+# visual studio code
+.vscode/
+*.code-workspace
+
+# os generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ruff cache files
+.ruff-cache/
+
+# log files
+*.log.*
