@@ -304,7 +304,6 @@ local mathcal_math_mode = snip(
     )
 )
 
--- Return all snippets in a table
 return {
     begin_end_env,
     dollar_expansion,

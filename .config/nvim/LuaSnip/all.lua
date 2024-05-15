@@ -2,21 +2,22 @@ local ls = require("luasnip")
 local snip = ls.snippet
 local fmta = require("luasnip.extras.fmt").fmta
 
-return {
-	-- "hi" --> "hello, world!" 
-	snip(
-		{ trig = "hi" },
-		{ t("Hello, world!") }
-	),
+local hello_world = snip(
+	{ trig = "hi" },
+	{ t("Hello, world!") }
+)
 
-	-- meta snippet to create more snippets
+local snip_factory = snip(
+	{ trig = "snip" },
+	fmta([[
 	snip(
-		{ trig = "snip" },
-		fmta([[
-		snip(
-		<>
-		)
-		]], 
-		{i(0)})
-	),
+	<>
+	)
+	]], 
+	{i(0)})
+)
+
+return {
+	hello_world,
+	snip_factory
 }
