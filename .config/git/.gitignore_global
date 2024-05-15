@@ -1,5 +1,11 @@
-# python
+# pycache
 __pycache__/
+
+# general package stuff
+*.egg
+*.egg-info/
+dist/
+build/
 
 # visual studio code
 .vscode/
