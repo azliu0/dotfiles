@@ -14,16 +14,6 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  -- rose pine
-  use({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
-	  tag = 'v0.1.0',
-	  config = function()
-		  vim.cmd('colorscheme rose-pine')
-	  end
-  })
-
   -- Treesitter
   use {
 	  'nvim-treesitter/nvim-treesitter',
@@ -42,4 +32,18 @@ return require('packer').startup(function(use)
   -- vim-fugitive
   use { 'tpope/vim-fugitive' }
 
+  -- side and bottom bars
+  use { 'nvim-tree/nvim-tree.lua' }
+  use { 'nvim-tree/nvim-web-devicons' }
+  use { 'nvim-lualine/lualine.nvim' }
+
+  -- theme
+  use { "catppuccin/nvim", as = "catppuccin" }
+
+  -- lsp
+  use {
+	  "williamboman/mason.nvim",
+	  "williamboman/mason-lspconfig.nvim",
+	  "neovim/nvim-lspconfig",
+  }
 end)
