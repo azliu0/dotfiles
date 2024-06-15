@@ -12,14 +12,14 @@ BASE_DIR="$HOME/Dotfiles/.config"
 
 mkdir -p "$BASE_DIR"
 
-link_file() {
+link() {
     local src=$1
     local dest=$2
 
     mkdir -p "$(dirname "$dest")"
 
     if [ -e "$dest" ]; then
-        echo "File already exists: $dest. removing it."
+        echo "Destination already exists: $dest. removing it."
         rm -rf "$dest"
     fi
 
@@ -27,25 +27,39 @@ link_file() {
     ln "$src" "$dest"
 }
 
-link_file "$HOME/.gitconfig" "$BASE_DIR/git/.gitconfig"
-link_file "$HOME/.gitignore_global" "$BASE_DIR/git/.gitignore_global"
-link_file "$HOME/.config/htop/htoprc" "$BASE_DIR/htop/htoprc"
-link_file "$HOME/Library/Preferences/com.googlecode.iterm2.plist" "$BASE_DIR/iterm2/com.googlecode.iterm2.plist"
-link_file "$HOME/.latexmkrc" "$BASE_DIR/latexmk/.latexmkrc"
-link_file "$HOME/.config/nvim/init.vim" "$BASE_DIR/nvim/init.vim"
-link_file "$HOME/.config/nvim/LuaSnip/all.lua" "$BASE_DIR/nvim/LuaSnip/all.lua"
-link_file "$HOME/.config/nvim/LuaSnip/tex.lua" "$BASE_DIR/nvim/LuaSnip/tex.lua"
-link_file "$HOME/.config/skhd/skhdrc" "$BASE_DIR/skhd/skhdrc"
-link_file "$HOME/.config/yabai/yabairc" "$BASE_DIR/yabai/yabairc"
-link_file "$HOME/.config/zathura/zathurarc" "$BASE_DIR/zathura/zathurarc"
-link_file "$HOME/.p10k.zsh" "$BASE_DIR/zsh/.p10k.zsh"
-link_file "$HOME/.zshrc" "$BASE_DIR/zsh/.zshrc"
+hardlink_directory() {
+    local src=$1
+    local dest=$2
+
+    mkdir -p "$dest"
+
+    find "$src" -depth -print | while read file; do
+        relative_path="${file#$src}"
+        if [ -d "$file" ]; then
+            mkdir -p "$dest$relative_path"
+        else
+            link "$file" "$dest$relative_path"
+        fi
+    done
+}
+
+link "$HOME/.gitconfig" "$BASE_DIR/git/.gitconfig"
+link "$HOME/.gitignore_global" "$BASE_DIR/git/.gitignore_global"
+hardlink_directory "$HOME/.config/htop" "$BASE_DIR/htop"
+link "$HOME/Library/Preferences/com.googlecode.iterm2.plist" "$BASE_DIR/iterm2/com.googlecode.iterm2.plist"
+link "$HOME/.latexmkrc" "$BASE_DIR/latexmk/.latexmkrc"
+hardlink_directory "$HOME/.config/nvim" "$BASE_DIR/nvim"
+hardlink_directory "$HOME/.config/skhd" "$BASE_DIR/skhd"
+hardlink_directory "$HOME/.config/yabai" "$BASE_DIR/yabai"
+hardlink_directory "$HOME/.config/zathura" "$BASE_DIR/zathura"
+link "$HOME/.p10k.zsh" "$BASE_DIR/zsh/.p10k.zsh"
+link "$HOME/.zshrc" "$BASE_DIR/zsh/.zshrc"
 
 STY_DIR="$HOME/Library/texmf/tex/latex"
 
 # if _andrew.sty is not installed before linking, throw a warning 
 if [ -e "$STY_DIR/_andrew.sty" ]; then
-    link_file "$STY_DIR/_andrew.sty" "$BASE_DIR/latex/_andrew.sty"
+    link "$STY_DIR/_andrew.sty" "$BASE_DIR/latex/_andrew.sty"
 else
     echo "skipping linking: _andrew.sty is not installed into $STY_DIR."
 fi
