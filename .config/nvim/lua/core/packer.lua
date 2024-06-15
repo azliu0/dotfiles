@@ -38,12 +38,16 @@ return require('packer').startup(function(use)
   use { 'nvim-lualine/lualine.nvim' }
 
   -- theme
-  use { "catppuccin/nvim", as = "catppuccin" }
+  use { 'catppuccin/nvim', as = 'catppuccin' }
 
   -- lsp
   use {
-	  "williamboman/mason.nvim",
-	  "williamboman/mason-lspconfig.nvim",
-	  "neovim/nvim-lspconfig",
+	  'williamboman/mason.nvim',
+	  'williamboman/mason-lspconfig.nvim',
+	  'neovim/nvim-lspconfig',
   }
+
+  -- copilot
+  use { 'github/copilot.vim' }
+
 end)
