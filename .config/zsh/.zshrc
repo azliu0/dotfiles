@@ -28,6 +28,10 @@ alias treegen="tree -H . -I 'index.html|*.fdb_latexmk|*.aux|*.fls|*.out|*.pre|*.
 alias f="fortune"
 alias spotify="spicetify update && spicetify config current_theme Ziro && spicetify config color_scheme orange_light && spicetify apply"
 
+alias run_swebench='python3 /Users/andrew/Desktop/fossa-labs/repos/nora-mono/nora/scripts/job_handling/collate.py && python3 /Users/andrew/Desktop/fossa-labs/repos/nora-mono/nora/scripts/run_swebench.py ./preds.jsonl --env /Users/andrew/Desktop/fossa-labs/repos/nora-mono/nora/.env'
+alias upload_job='python3 /Users/andrew/Desktop/fossa-labs/repos/nora-mono/nora/scripts/upload_job.py'
+alias src='source /Users/andrew/Desktop/fossa-labs/repos/nora-mono/nora/venv/bin/activate'
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -61,3 +65,6 @@ if [ -f '/Users/andrew/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/User
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/andrew/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/andrew/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Created by `pipx` on 2024-07-20 03:46:27
+export PATH="$PATH:/Users/andrew/.local/bin"
