@@ -22,15 +22,15 @@ alias g++="g++ -std=c++20"
 alias sublime="open -a 'sublime text'"
 alias l="ls -la"
 alias qcatgirl="cat $DOTFILES/secret.txt"
-alias notes_template="zsh $DOTFILES/latex/scripts/notes.sh"
-alias pset_template="zsh $DOTFILES/latex/scripts/pset.sh"
+alias notes_template="zsh $DOTFILES/.config/latex/scripts/notes.sh"
+alias pset_template="zsh $DOTFILES/.config/latex/scripts/pset.sh"
 alias treegen="tree -H . -I 'index.html|*.fdb_latexmk|*.aux|*.fls|*.out|*.pre|*.synctex*|*.toc' -D --timefmt='%b %d %Y %R' --charset utf-8 -T 'Test' > index.html"
 alias f="fortune"
 alias spotify="spicetify update && spicetify config current_theme Ziro && spicetify config color_scheme orange_light && spicetify apply"
-
-alias run_swebench='python3 /Users/andrew/Desktop/fossa-labs/repos/nora-mono/nora/scripts/job_handling/collate.py && python3 /Users/andrew/Desktop/fossa-labs/repos/nora-mono/nora/scripts/run_swebench.py ./preds.jsonl --env /Users/andrew/Desktop/fossa-labs/repos/nora-mono/nora/.env'
-alias upload_job='python3 /Users/andrew/Desktop/fossa-labs/repos/nora-mono/nora/scripts/upload_job.py'
-alias src='source /Users/andrew/Desktop/fossa-labs/repos/nora-mono/nora/venv/bin/activate'
+alias b="git --no-pager branch"
+alias bs="git branch | grep -i"
+alias c="bash utils/create.sh"
+alias s="bash utils/statistics.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -68,3 +68,4 @@ if [ -f '/Users/andrew/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . 
 
 # Created by `pipx` on 2024-07-20 03:46:27
 export PATH="$PATH:/Users/andrew/.local/bin"
+ulimit -s unlimited
