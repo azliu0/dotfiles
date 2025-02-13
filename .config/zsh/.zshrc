@@ -29,8 +29,9 @@ alias f="fortune"
 alias spotify="spicetify update && spicetify config current_theme Ziro && spicetify config color_scheme orange_light && spicetify apply"
 alias b="git --no-pager branch"
 alias bs="git branch | grep -i"
-alias c="bash utils/create.sh"
-alias s="bash utils/statistics.sh"
+alias c="bash $HOME/Desktop/cp-lib/utils/create.sh"
+alias s="bash $HOME/Desktop/cp-lib/utils/statistics.sh"
+alias gc="git checkout"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

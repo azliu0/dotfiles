@@ -10,14 +10,12 @@ return require('packer').startup(function(use)
   -- telescope 
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.6',
-	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
   -- Treesitter
   use {
 	  'nvim-treesitter/nvim-treesitter',
-	  run = ':TSUpdate',
   }
 
   -- Treesitter playground
@@ -38,13 +36,31 @@ return require('packer').startup(function(use)
   use { 'nvim-lualine/lualine.nvim' }
 
   -- theme
-  use { 'catppuccin/nvim', as = 'catppuccin' }
+  use {
+    'catppuccin/nvim',
+    as = 'catppuccin', 
+    config = function()
+      require("catppuccin").setup({
+        transparent_background = true,
+      })
+      vim.cmd("colorscheme catppuccin-latte")
+    end
+  }
 
   -- lsp
+  -- use {
+	--  'williamboman/mason.nvim',
+	--  'williamboman/mason-lspconfig.nvim',
+	--  'neovim/nvim-lspconfig',
+  -- }
+
+  -- vimtex
   use {
-	  'williamboman/mason.nvim',
-	  'williamboman/mason-lspconfig.nvim',
-	  'neovim/nvim-lspconfig',
+   "lervag/vimtex",
+    lazy = false,
+    init = function()
+      vim.g.vimtex_view_method = "zathura"
+    end
   }
 
   -- copilot
