@@ -30,8 +30,8 @@ alias f="fortune"
 alias spotify="spicetify update && spicetify config current_theme Ziro && spicetify config color_scheme orange_light && spicetify apply"
 alias b="git --no-pager branch"
 alias bs="git branch | grep -i"
-alias c="bash $HOME/Desktop/cp-lib/utils/create.sh"
-alias s="bash $HOME/Desktop/cp-lib/utils/statistics.sh"
+alias c="bash create.sh"
+alias s="bash statistics.sh"
 alias gc="git checkout"
 
 if [[ -z "$INSIDE_NVIM" ]]; then
@@ -43,6 +43,7 @@ fi
 
 export PATH=$PATH:/Users/andrew/.spicetify
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="$HOME/Desktop/cp-lib/utils:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

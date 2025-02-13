@@ -36,16 +36,7 @@ return require('packer').startup(function(use)
   use { 'nvim-lualine/lualine.nvim' }
 
   -- theme
-  use {
-    'catppuccin/nvim',
-    as = 'catppuccin', 
-    config = function()
-      require("catppuccin").setup({
-        transparent_background = true,
-      })
-      vim.cmd("colorscheme catppuccin-latte")
-    end
-  }
+  use { 'catppuccin/nvim' }
 
   -- lsp
   -- use {
@@ -62,6 +53,9 @@ return require('packer').startup(function(use)
       vim.g.vimtex_view_method = "zathura"
     end
   }
+
+  -- autoclosing brackets
+  use { 'm4xshen/autoclose.nvim' }
 
   -- copilot
   -- use { 'github/copilot.vim' }

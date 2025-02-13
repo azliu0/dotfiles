@@ -10,7 +10,7 @@
 [core]
 	excludesFile = ~/.gitignore_global
 [http]
-	sslVerify = true
+	sslVerify = false
 	sslCAInfo = /Users/andrew/.ssh/ca.pem
 [merge]
 	conflictstyle = diff3
