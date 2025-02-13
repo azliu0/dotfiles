@@ -21,22 +21,22 @@ return require('packer').startup(function(use)
   -- Treesitter playground
   use { 'nvim-treesitter/playground' }
 
-  -- harpoon 
-  use { 'theprimeagen/harpoon' }
-
-  -- undotree
-  use { 'mbbill/undotree' }
-
-  -- vim-fugitive
-  use { 'tpope/vim-fugitive' }
-
   -- side and bottom bars
   use { 'nvim-tree/nvim-tree.lua' }
   use { 'nvim-tree/nvim-web-devicons' }
   use { 'nvim-lualine/lualine.nvim' }
 
   -- theme
-  use { 'catppuccin/nvim' }
+  use {
+    'catppuccin/nvim',
+    as = 'catppuccin', 
+    config = function()
+      require("catppuccin").setup({
+        transparent_background = true,
+      })
+      vim.cmd("colorscheme catppuccin-latte")
+    end
+  }
 
   -- lsp
   -- use {
