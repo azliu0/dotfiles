@@ -3,18 +3,19 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# dotfile paths (required for various system scripts)
 export DOTFILES="$HOME/Dotfiles"
 export NVIM="$HOME/.config/nvim"
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# zsh plugins
-plugins=(git z zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)
+if [[ -z "$INSIDE_NVIM" ]]; then
+  # zsh plugins
+  plugins=(git z zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)
 
-source $ZSH/oh-my-zsh.sh
-source $ZSH_CUSTOM/catppuccin/catppuccin_mocha-zsh-syntax-highlighting.zsh
+  source $ZSH/oh-my-zsh.sh
+  source $ZSH_CUSTOM/catppuccin/catppuccin_mocha-zsh-syntax-highlighting.zsh
+fi
 
 # aliases
 alias vim="nvim"
@@ -33,10 +34,12 @@ alias c="bash $HOME/Desktop/cp-lib/utils/create.sh"
 alias s="bash $HOME/Desktop/cp-lib/utils/statistics.sh"
 alias gc="git checkout"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [[ -z "$INSIDE_NVIM" ]]; then
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+  # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+fi
 
 export PATH=$PATH:/Users/andrew/.spicetify
 export PATH="/opt/homebrew/bin:$PATH"

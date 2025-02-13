@@ -27,6 +27,11 @@ vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 vim.keymap.set('n', '<leader>pv', '<C-w>h')
 vim.keymap.set('n', '<leader>pc', '<C-w>l')
 
+-- load shell profile
+vim.opt.shell = "/bin/zsh"
+vim.opt.shellcmdflag = "-ic"
+vim.env.INSIDE_NVIM = "1" -- required to handle interactive shell properly
+
 -- quit tree and file at the same time
 function SaveAndQuit()
   vim.cmd('w')
